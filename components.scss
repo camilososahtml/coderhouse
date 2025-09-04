@@ -1,0 +1,47 @@
+.cta-btn, button {
+  background-color: $color-primary !important;
+  color: $color-black !important;
+  cursor: pointer;
+  font-weight: bold;
+  border-radius: 6px;
+  @include transition(background 0.3s);
+
+  &:hover {
+    background-color: lighten($color-primary, 10%) !important;
+    color: $color-black !important;
+  }
+}
+
+.video-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+
+  iframe {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    border-radius: 10px;
+    @include box-shadow();
+    @include transition(box-shadow 0.4s);
+
+    &:hover {
+      box-shadow: 0 4px 16px rgba(0,0,0,0.25);
+      transform: scale(1.01);
+    }
+  }
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  input, textarea, button {
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+}

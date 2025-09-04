@@ -1,0 +1,48 @@
+header {
+  background-color: $color-secondary;
+  color: $color-primary;
+  padding: 20px;
+  text-align: center;
+
+  nav ul {
+    @include flex-center(row, 20px);
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    @media (max-width: 600px) {
+      flex-direction: column;
+      gap: 10px;
+    }
+  }
+
+  nav a {
+    color: $color-primary;
+    text-decoration: none;
+    font-weight: bold;
+    @include transition(color 0.2s);
+
+    &:hover {
+      color: lighten($color-primary, 10%);
+      text-decoration: underline;
+    }
+  }
+}
+
+main {
+  max-width: 1000px;
+  margin: 20px auto;
+  padding: 15px;
+  background-color: rgba(0,0,0,0.85);
+  border-radius: 8px;
+  @include box-shadow(rgba(0,0,0,0.1));
+  color: $color-primary;
+}
+
+footer {
+  background-color: $color-secondary;
+  color: $color-primary;
+  text-align: center;
+  padding: 15px;
+  margin-top: 20px;
+}
